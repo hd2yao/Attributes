@@ -77,7 +77,7 @@ if __name__ == '__main__':
     meanMatrix = meanMatrix[0]
     convMatrix = np.diag([10000000] * 32)
 
-    axis = attributesGenerator(127.5, 42.5, 32, 3000)
+    axis = attributesGenerator(127.5, 42.5, 32, 30)
     axis = np.array(axis)
 
     resultFList = arrayF(axis, meanMatrix, convMatrix)
