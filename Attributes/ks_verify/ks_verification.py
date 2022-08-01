@@ -1,6 +1,7 @@
 from scipy import stats
 import pandas as pd
-
+import numpy as np
+from Attributes.attributes_Generator.n_norm import attributesGenerator
 
 # .kstest方法：KS检验，参数分别是：待检验的数据，检验方法（这里设置成norm正态分布），均值与标准差
 # 结果返回两个值：statistic → D值，pvalue → P值
@@ -22,4 +23,14 @@ def ks(array):
 if __name__ == '__main__':
     data = [140, 118, 95, 132, 125, 120, 172, 176, 185, 109, 200, 84, 55, 228, 114, 152, 145, 96, 69, 149, 145, 140,
             108, 68, 52, 98, 154, 128, 104, 122, 118, 209]
-    ks(data)
+
+    meanMatrix = np.full((1, 32), 127.5)
+    meanMatrix = meanMatrix[0]
+    # 协方差矩阵
+    convMatrix = np.diag([1806.25] * 32)
+    axis = attributesGenerator(127.5, 42.5, 32, 30)
+    axis = np.array(axis)
+    for i in range(len(axis)):
+        ks(axis[i])
+
+    # ks(data)

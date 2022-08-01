@@ -1,5 +1,4 @@
 import pandas as pd
-
 from Attributes.attributes_Generator.n_norm import attributesGenerator
 
 

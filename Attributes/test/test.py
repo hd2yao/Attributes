@@ -1,10 +1,6 @@
 import time
-
 import scipy.stats
 import numpy as np
-import array
-
-from Attributes.rarity.rarity import rarity
 from Attributes.xlsx_flie.write_xlsx import xlsx_file
 
 
